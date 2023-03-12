@@ -115,7 +115,7 @@ def process_web_request(cs, webroot):
     inputs = [cs]
     outputs = []
     num_accesos = 1
-    cookie_counter_XXYY = 1
+    cookie_counter_7883 = 1
     while num_accesos < MAX_ACCESOS_SERVER:
         # Se comprueba si hay que cerrar la conexión por exceder TIMEOUT_CONNECTION segundos
         # sin recibir ningún mensaje o hay datos. Se utiliza select.select
@@ -204,14 +204,14 @@ def process_web_request(cs, webroot):
                     # Si se ha llegado a MAX_ACCESOS devolver un Error "403 Forbidden"
                     cookie = ""
                     if ruta == webroot + "/index.html":
-                        cookie_counter_XXYY = process_cookies(lista, cookie_counter_XXYY)
-                        if cookie_counter_XXYY == MAX_ACCESOS_COOKIES:
+                        cookie_counter_7883 = process_cookies(lista, cookie_counter_7883)
+                        if cookie_counter_7883 == MAX_ACCESOS_COOKIES:
                             ruta = webroot + "/error403.html"
                             enviar_error(cs, ruta, "403 Forbidden")
                             continue
                         else:
                             cookie = (
-                                "Set-Cookie: cookie_counter_XXYY= " + str(cookie_counter_XXYY) + "; Max-Age=120\r\n"
+                                "Set-Cookie: cookie_counter_7883= " + str(cookie_counter_7883) + "; Max-Age=120\r\n"
                             )
                     # Obtener el tamaño del recurso en bytes.
                     tamaño = os.stat(ruta).st_size
