@@ -1,1 +1,0 @@
-archivo para comprobar el Error 415 Unsupported Media Type
